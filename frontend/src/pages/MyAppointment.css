@@ -1,0 +1,154 @@
+/* Container */
+.appointments-container {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .appointments-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Card layout */
+  .appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .appointment-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeInUp 0.8s ease-in-out;
+    align-items: center;
+  }
+  
+  /* Image section */
+  .doctor-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 20px;
+  }
+  
+  /* Text section */
+  .doctor-details {
+    flex: 1;
+  }
+  
+  .doctor-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .doctor-speciality {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .address-title {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .appointment-time {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .appointment-buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+  }
+  
+  .btn.pay {
+    background-color: #003366;
+    color: white;
+  }
+  
+  .btn.cancel {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Responsive Layouts */
+  @media (max-width: 768px) {
+    .appointment-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .doctor-image img {
+      margin: 0 auto 15px auto;
+      width: 120px;
+      height: 120px;
+    }
+  
+    .appointment-buttons {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appointments-title {
+      font-size: 22px;
+    }
+  
+    .doctor-name {
+      font-size: 18px;
+    }
+  
+    .doctor-speciality,
+    .appointment-time {
+      font-size: 13px;
+    }
+  
+    .btn {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+  }
+  

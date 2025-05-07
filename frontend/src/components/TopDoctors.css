@@ -1,0 +1,122 @@
+.top-doctors {
+    padding: 60px 40px;
+    background-color: #f8fbff;
+    text-align: center;
+  }
+  
+  .top-doctors h1 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .top-doctors p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .top-doctor-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .doctor-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    text-align: center;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Doctor image with hover animation */
+  .doctor-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .doctor-card:hover .doctor-img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  }
+
+  .doctor-card {
+    cursor: pointer; /* optional if wrapping full card in Link */
+  }
+  
+  .availability {
+    font-size: 13px;
+    color: green;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .doctor-card h3 {
+    margin: 0;
+    color: #003366;
+    font-size: 18px;
+  }
+  
+  .doctor-card p {
+    margin: 4px 0 0;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  /* Button styling */
+  .top-doctors button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .top-doctors button:hover {
+    background-color: #005ecb;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .top-doctor-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .top-doctor-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

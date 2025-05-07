@@ -1,0 +1,113 @@
+/* Container for the Speciality section */
+#speciality {
+    padding: 60px 40px;
+    background-color: #f8fbff;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Title styling */
+  .speciality-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideDown 0.8s ease-out forwards;
+  }
+  
+  /* Subtitle/description */
+  #speciality > p {
+    font-size: 19px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.4s forwards;
+  }
+  
+  /* Speciality grid container */
+  #speciality > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  /* Each speciality card */
+  #speciality a {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 180px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeUp 0.6s ease forwards;
+  }
+  
+  /* Add delay for each card */
+  #speciality a:nth-child(1) { animation-delay: 0.2s; }
+  #speciality a:nth-child(2) { animation-delay: 0.4s; }
+  #speciality a:nth-child(3) { animation-delay: 0.6s; }
+  #speciality a:nth-child(4) { animation-delay: 0.8s; }
+  #speciality a:nth-child(5) { animation-delay: 1s; }
+  #speciality a:nth-child(6) { animation-delay: 1.2s; }
+  
+  /* Hover effect for cards */
+  #speciality a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  }
+  
+  /* Image styling */
+  .speciality-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 50%;
+  }
+  
+  /* Speciality name text */
+  #speciality a p {
+    color: #003366;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0;
+  }
+  
+  /* Responsive padding */
+  @media (max-width: 600px) {
+    #speciality {
+      padding: 40px 20px;
+    }
+  
+    .speciality-title {
+      font-size: 28px;
+    }
+  
+    #speciality p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes cardFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

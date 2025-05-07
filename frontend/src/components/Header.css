@@ -1,0 +1,180 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #a8c2eb; /* Tailwind's bg-primary equivalent */
+    border-radius: 5px;
+    padding: 24px 40px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation for the entire header */
+    width: 95%; 
+    max-width: 1300px; /* Set a maximum width */
+    margin-left: auto; /* Center the header horizontally */
+    margin-right: auto; /* Center the header horizontally */
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Left side content */
+.header-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 40px 0;
+    animation: fadeInLeft 1s ease-in-out 0.3s forwards; /* Animation for left content */
+}
+
+/* Header title with slide-in and fade-in animation */
+.header-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #003366;
+    line-height: 1.3;
+    margin: 0;
+    text-align: left;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    animation: titleAnimation 1s ease-in-out 0.5s forwards; /* Animation applied to title */
+}
+
+/* Hover effect for title */
+.header-title:hover {
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Description under the title */
+.header-description p {
+    margin-top: 8px;
+    font-size: 19px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limit the width of the description */
+    margin-bottom: 20px;
+    opacity: 0;
+
+    animation: fadeInDescription 1s ease-in-out 1s forwards; /* Animation for description */
+}
+
+
+
+/* Button styling with animation */
+.header-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    background-color: #003366;
+    color: rgb(249, 245, 245);
+    font-size: 16px bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    width: fit-content;
+    transition: background-color 0.3s;
+    opacity: 0;
+    animation: buttonAnimation 1s ease-in-out 1.5s forwards; /* Fade-in animation for the button */
+}
+
+/* Hover effect for the button */
+.header-button:hover {
+    background-color: #0d09e7;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Right side image */
+.header-right img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInRight 1s ease-in-out 1s forwards; /* Animation for the image */
+}
+
+/* Fade-in animation for the entire header */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Left content fade-in animation */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDescription {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-left {
+        padding: 20px;
+    }
+}

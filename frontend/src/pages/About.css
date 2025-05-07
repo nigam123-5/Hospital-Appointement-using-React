@@ -1,0 +1,169 @@
+/* General container */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Heading styles */
+.about-heading p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about-heading span {
+  color: #003366; /* Indigo highlight */
+}
+
+/* Flex layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+/* Image styling */
+.about-content img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  animation: fadeIn 1s ease-in;
+  transition: transform 0.3s ease;
+}
+
+/* Text block */
+.about-text {
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #555;
+  animation: slideInRight 1s ease-in;
+}
+
+.about-text b {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+/* Why Choose Us Section */
+
+.why-heading{
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #333;
+  margin: 2rem 0;
+
+}
+.why-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f0f4ff; /* Light blue background */
+  border-radius: 1rem;  
+
+  gap: 2rem;
+}
+
+.why-card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  background-color: #b9c4e5; /* Light blue hover effect */
+  transition: background-color 0.3s ease;
+
+}
+
+.why-card b {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-card {
+    width: 100%;
+  }
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
