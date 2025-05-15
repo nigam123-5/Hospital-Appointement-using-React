@@ -7,7 +7,7 @@ This project is designed for **Patients, Doctors, and Admins**. It provides a re
 
 ## 🔗 Live Demo
 
-(Insert your live demo link here after deployment)
+https://healthcaremedical.netlify.app/
 
 
 ## 📌 Features
